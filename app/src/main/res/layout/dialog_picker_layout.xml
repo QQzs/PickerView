@@ -67,7 +67,7 @@
                 app:normalTextSize="@dimen/s_16"
                 app:selectedTextColor="@color/c_FF8200"
                 app:selectedTextSize="@dimen/s_20"
-                app:unitHight="@dimen/d_45" />
+                app:unitHeight="@dimen/d_45" />
 
             <com.zs.pickerview.view.WheelView
                 android:id="@+id/picker_wheel_2"
@@ -81,7 +81,7 @@
                 app:normalTextSize="@dimen/s_16"
                 app:selectedTextColor="@color/c_FF8200"
                 app:selectedTextSize="@dimen/s_20"
-                app:unitHight="@dimen/d_45" />
+                app:unitHeight="@dimen/d_45" />
 
             <com.zs.pickerview.view.WheelView
                 android:id="@+id/picker_wheel_3"
@@ -95,7 +95,7 @@
                 app:normalTextSize="@dimen/s_16"
                 app:selectedTextColor="@color/c_FF8200"
                 app:selectedTextSize="@dimen/s_20"
-                app:unitHight="@dimen/d_45" />
+                app:unitHeight="@dimen/d_45" />
 
         </LinearLayout>
 

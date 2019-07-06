@@ -60,7 +60,7 @@ public class WheelView extends View {
     /**
      * 短促移动距离
      */
-    private int goonDistence = 100;
+    private int goonDistance = 100;
     /**
      * 画线画笔
      */
@@ -100,7 +100,7 @@ public class WheelView extends View {
     /**
      * 蒙板高度
      */
-    private float maskHight = 36.0f;
+    private float maskHeight = 36.0f;
     /**
      * 选择监听
      */
@@ -181,7 +181,7 @@ public class WheelView extends View {
                 int move = Math.abs(y - downY);
                 // 判断段时间移动的距离
                 if (System.currentTimeMillis() - downTime < goonTime
-                        && move > goonDistence) {
+                        && move > goonDistance) {
                     goonMove(y - downY);
                 } else {
                     actionUp(y - downY);
@@ -300,7 +300,7 @@ public class WheelView extends View {
             itemList.add(itmItemObject);
         }
         isClearing = false;
-        maskHight = dip2px(getContext() , 44);
+        maskHeight = dip2px(getContext() , 44);
     }
 
     public int dip2px(Context context, float dpValue) {
@@ -481,17 +481,17 @@ public class WheelView extends View {
         int colorStart = getResources().getColor(R.color.c_FFFFFF);
         int colorEnd = getResources().getColor(R.color.c_a_00_FFFFFF);
 
-        LinearGradient lg = new LinearGradient(0, 0, 0, maskHight, colorStart,
+        LinearGradient lg = new LinearGradient(0, 0, 0, maskHeight, colorStart,
                 colorEnd, TileMode.CLAMP);
         Paint paint = new Paint();
         paint.setShader(lg);
-        canvas.drawRect(0, 0, controlWidth, maskHight, paint);
+        canvas.drawRect(0, 0, controlWidth, maskHeight, paint);
 
-        LinearGradient lg2 = new LinearGradient(0, controlHeight - maskHight,
+        LinearGradient lg2 = new LinearGradient(0, controlHeight - maskHeight,
                 0, controlHeight, colorEnd, colorStart, TileMode.CLAMP);
         Paint paint2 = new Paint();
         paint2.setShader(lg2);
-        canvas.drawRect(20, controlHeight - maskHight, controlWidth - 20,
+        canvas.drawRect(20, controlHeight - maskHeight, controlWidth - 20,
                 controlHeight, paint2);
     }
 
@@ -506,7 +506,7 @@ public class WheelView extends View {
         TypedArray attribute = context.obtainStyledAttributes(attrs,
                 R.styleable.WheelView);
         unitHeight = (int) attribute.getDimension(
-                R.styleable.WheelView_unitHight, 32);
+                R.styleable.WheelView_unitHeight, 32);
         normalFont = attribute.getDimension(
                 R.styleable.WheelView_normalTextSize, 14.0f);
         selectedFont = attribute.getDimension(
@@ -519,7 +519,7 @@ public class WheelView extends View {
         lineColor = attribute.getColor(R.styleable.WheelView_lineColor,
                 0xff000000);
         lineWidth = attribute.getDimension(R.styleable.WheelView_lineHeight, 2f);
-        maskHight = attribute.getDimension(R.styleable.WheelView_maskHight,
+        maskHeight = attribute.getDimension(R.styleable.WheelView_maskHeight,
                 48.0f);
         noEmpty = attribute.getBoolean(R.styleable.WheelView_noEmpty, true);
         isEnable = attribute
