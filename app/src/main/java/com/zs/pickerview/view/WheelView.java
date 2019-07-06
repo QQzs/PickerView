@@ -15,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.zs.pickerview.R;
+import com.zs.pickerview.pool.JobManager;
 
 import java.util.ArrayList;
 
@@ -237,8 +238,8 @@ public class WheelView extends View {
      * 继续移动一定距离
      */
     private synchronized void goonMove(final int move) {
-        new Thread(new Runnable() {
 
+        JobManager.getInstance().submitRunnable(new Runnable() {
             @Override
             public void run() {
                 int distence = 0;
@@ -255,7 +256,7 @@ public class WheelView extends View {
                 actionUp(move > 0 ? distence - 10 : distence * (-1) + 10);
                 noEmpty();
             }
-        }).start();
+        });
     }
 
     /**
@@ -373,8 +374,8 @@ public class WheelView extends View {
      * @param move
      */
     private synchronized void slowMove(final int move) {
-        new Thread(new Runnable() {
 
+        JobManager.getInstance().submitRunnable(new Runnable() {
             @Override
             public void run() {
                 // 判断政府
@@ -413,9 +414,16 @@ public class WheelView extends View {
 //                        break;
 //                    }
 //                }
-
             }
-        }).start();
+        });
+
+//        new Thread(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//
+//            }
+//        }).start();
     }
 
     /**
