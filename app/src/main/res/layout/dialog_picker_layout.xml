@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/d_8"
+        android:layout_marginRight="@dimen/d_8"
+        android:layout_marginBottom="@dimen/d_20"
+        android:background="@drawable/bg_white_corner_size_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44">
+
+            <TextView
+                android:id="@+id/picker_tv_cancel"
+                android:layout_width="@dimen/d_54"
+                android:layout_height="match_parent"
+                android:text="@string/txt_cancel"
+                android:textColor="@color/c_303030"
+                android:textSize="@dimen/s_15"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/picker_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/c_303030"
+                android:textSize="@dimen/s_17"
+                android:gravity="center"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/picker_tv_complete"
+                android:layout_width="@dimen/d_54"
+                android:layout_height="match_parent"
+                android:text="@string/txt_complete"
+                android:textColor="@color/c_303030"
+                android:textSize="@dimen/s_15"
+                android:layout_alignParentRight="true"
+                android:gravity="center"/>
+
+            <View style="@style/style_line"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.zs.pickerview.view.WheelView
+                android:id="@+id/picker_wheel_1"
+                android:layout_width="@dimen/d_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:itemNumber="5"
+                app:lineColor="@color/c_F4F4F4"
+                app:lineHeight="@dimen/d_1"
+                app:normalTextColor="@color/c_303030"
+                app:normalTextSize="@dimen/s_16"
+                app:selectedTextColor="@color/c_FF8200"
+                app:selectedTextSize="@dimen/s_20"
+                app:unitHight="@dimen/d_45" />
+
+            <com.zs.pickerview.view.WheelView
+                android:id="@+id/picker_wheel_2"
+                android:layout_width="@dimen/d_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:itemNumber="5"
+                app:lineColor="@color/c_F4F4F4"
+                app:lineHeight="@dimen/d_1"
+                app:normalTextColor="@color/c_303030"
+                app:normalTextSize="@dimen/s_16"
+                app:selectedTextColor="@color/c_FF8200"
+                app:selectedTextSize="@dimen/s_20"
+                app:unitHight="@dimen/d_45" />
+
+            <com.zs.pickerview.view.WheelView
+                android:id="@+id/picker_wheel_3"
+                android:layout_width="@dimen/d_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:itemNumber="5"
+                app:lineColor="@color/c_F4F4F4"
+                app:lineHeight="@dimen/d_1"
+                app:normalTextColor="@color/c_303030"
+                app:normalTextSize="@dimen/s_16"
+                app:selectedTextColor="@color/c_FF8200"
+                app:selectedTextSize="@dimen/s_20"
+                app:unitHight="@dimen/d_45" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
